@@ -8,6 +8,10 @@ h3.hr {
     border-bottom: solid 1px #e1e1e1;
 }
 
+h3.element {
+    color: #840076;
+}
+
 .codeExample {
     background: #f1f1f1;
     padding: 12px;

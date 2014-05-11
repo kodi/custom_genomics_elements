@@ -14,7 +14,7 @@
 
             :host div#tooltip {
                 font-size: 12px;
-                padding: 4px 12px;
+                padding: 6px 12px;
                 position: absolute;
                 min-width: 140px;
                 z-index: 999;
@@ -28,11 +28,28 @@
                 -moz-box-shadow: 4px 4px 53px 0px rgba(0,0,0,0.22);
                 box-shadow: 4px 4px 53px 0px rgba(0,0,0,0.22);
             }
+
+
+            :host div#tooltip div.title {
+                margin: 0 0 6px 0;
+                font-weight: bold;
+                border-bottom: solid 1px #e1e1e1;
+            }
+
+            :host div#tooltip a {
+                background-repeat: no-repeat;
+                padding: 0 0 0 12px;
+                background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwIiBoZWlnaHQ9IjEwIj48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtODI2LjQyOSAtNjk4Ljc5MSkiPjxyZWN0IHdpZHRoPSI1Ljk4MiIgaGVpZ2h0PSI1Ljk4MiIgeD0iODI2LjkyOSIgeT0iNzAyLjMwOSIgZmlsbD0iI2ZmZiIgc3Ryb2tlPSIjMDZjIi8+PGc+PHBhdGggZD0iTTgzMS4xOTQgNjk4Ljc5MWg1LjIzNHY1LjM5MWwtMS41NzEgMS41NDUtMS4zMS0xLjMxLTIuNzI1IDIuNzI1LTIuNjg5LTIuNjg5IDIuODA4LTIuODA4LTEuMzExLTEuMzExeiIgZmlsbD0iIzA2ZiIvPjxwYXRoIGQ9Ik04MzUuNDI0IDY5OS43OTVsLjAyMiA0Ljg4NS0xLjgxNy0xLjgxNy0yLjg4MSAyLjg4MS0xLjIyOC0xLjIyOCAyLjg4MS0yLjg4MS0xLjg1MS0xLjg1MXoiIGZpbGw9IiNmZmYiLz48L2c+PC9nPjwvc3ZnPg==');
+                background-position: 0px 4px;
+
+
+            }
         </style>
 
         <div class="main" on-mouseover="{{over}}"  on-mouseout="{{out}}">
             <div id="tooltip">
-                {{name}} Gene <br/>
+                <div class="title">GENE: {{name}}</div>
+                Resources: <br/>
                 <a href="http://www.ncbi.nlm.nih.gov/gene/?term={{name}}" target="_blank">Search on NCBI site</a>
             </div>
             <span>{{name}}</span>
