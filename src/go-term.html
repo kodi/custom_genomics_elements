@@ -1,4 +1,4 @@
-<polymer-element name="x-gene" attributes="name">
+<polymer-element name="go-term" attributes="term">
     <template>
 
         <style>
@@ -6,6 +6,7 @@
 
                 position: relative;
                 display: inline;
+
             }
 
             :host div.main span {
@@ -14,7 +15,7 @@
 
             :host div#tooltip {
                 font-size: 12px;
-                padding: 4px 12px;
+                padding: 12px 6px;
                 position: absolute;
                 min-width: 140px;
                 z-index: 999;
@@ -32,16 +33,15 @@
 
         <div class="main" on-mouseover="{{over}}"  on-mouseout="{{out}}">
             <div id="tooltip">
-                {{name}} Gene <br/>
-                <a href="http://www.ncbi.nlm.nih.gov/gene/?term={{name}}" target="_blank">Search on NCBI site</a>
+                {{term}} <br/>
+                <a href="http://amigo.geneontology.org/amigo/term/{{term}}" target="_blank">View on AMIGO browser</a>
             </div>
-            <span>{{name}}</span>
-
+            <span>{{term}}</span>
         </div>
     </template>
     <script>
-        Polymer('x-gene', {
-            name: "Gene Name Not Provided",
+        Polymer('go-term', {
+            term: "Term not provided",
             over : function(){
                 this.$.tooltip.style.display = 'block';
             },

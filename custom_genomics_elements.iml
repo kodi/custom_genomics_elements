@@ -4,6 +4,8 @@
     <exclude-output />
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="platform" level="application" />
+    <orderEntry type="library" name="polymer" level="application" />
   </component>
 </module>
 

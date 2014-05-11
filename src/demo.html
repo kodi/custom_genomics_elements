@@ -2,24 +2,71 @@
 <html>
 <head>
 
-  <title>Genomics Elements | Custom Web Components Demo</title>
-
-  <script src="//cdnjs.cloudflare.com/ajax/libs/polymer/0.2.3/platform.js"></script>
-  <link rel="import" href="x-gene.html">
+    <title>Genomics Elements | Custom Web Components Demo</title>
+    <style type="text/css" rel=""></style>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300,700,600|Source+Code+Pro:400,700"
+          rel="stylesheet">
+    <link href="demo.css" rel="stylesheet">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/polymer/0.2.3/platform.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/polymer/0.2.3/polymer.js"></script>
+    <link rel="import" href="x-gene.html">
+    <link rel="import" href="go-term.html">
 
 </head>
 <body>
+<div class="container">
+    <h1>Genomics Elements</h1>
 
-  <h2>Genomics Elements</h2>
+    <h2>About</h2>
+    <h3 class="hr">Requirements</h3>
 
-  <h3>&lt;x-gene&gt;</h3>
-  <p>example</p>
-  <p>
-      BRCA1 and BRCA1 are a human gene and its protein product, respectively. The official symbol and the official name are maintained by the HGNC.
-      Orthologs, styled Brca1 and Brca1, are common in other mammal species. Wikipedia
-  </p>
+    <p>1) Include this two files from Polymer project via CDNjs, you can also download them and host them on your server.</p>
+    <textarea class="codeExample">
+<script src="//cdnjs.cloudflare.com/ajax/libs/polymer/0.2.3/platform.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/polymer/0.2.3/polymer.js"></script>
+    </textarea>
 
-  <x-gene name="BRCA1"></x-gene>
+    <p>2) Include individual files for the files you need, for example if we are going to use x-gene custom element we will include x-gene.html file</p>
+    <textarea class="codeExample">
+<link rel="import" href="x-gene.html">
+    </textarea>
+
+
+    <h2>Elements</h2>
+    <h3 class="hr">&lt;x-gene&gt;</h3>
+
+    <strong>usage</strong>
+    <div class="codeExample">
+        &lt;x-gene name=&quot;BRCA1&quot;&gt;&lt;/x-gene&gt;
+    </div>
+
+    <p><strong>example</strong> (hover BRCA1 gene name in text below to see tooltip)</p>
+
+    <p>
+        <x-gene name="BRCA1"></x-gene> and <x-gene name="BRCA1"></x-gene>
+        are a human gene and its protein product, respectively. The official symbol and the official name are maintained
+        by the HGNC.
+        Orthologs, styled Brca1 and Brca1, are common in other mammal species. Wikipedia
+    </p>
+
+
+    <h3 class="hr">&lt;go-term&gt;</h3>
+
+
+    <strong>usage</strong>
+    <div class="codeExample">
+        &lt;go-term term=&quot;GO:0070531&quot;&gt;&lt;/go-term&gt;
+    </div>
+
+    <strong>example</strong>
+
+    <p>
+        <go-term term="GO:0070531"></go-term> : A protein complex that contains the BRCA1-BARD1 heterodimer, RAP80/UIMC1, BRCC3/BRCC36, BRE/BRCC45,
+        FAM175A/CCDC98/Abraxas and MERIT40/NBA1, and specifically recognizes and binds K63-linked polyubiquitin chains present on histone
+        H2A and H2AX at DNA damage sites. Source
+    </p>
+</div>
+
 
 </body>
 </html>

@@ -1,0 +1,29 @@
+body {
+
+    font-family: 'Open Sans',  Helvetica Neue, Helvetica, arial, sans-serif;
+
+}
+
+h3.hr {
+    border-bottom: solid 1px #e1e1e1;
+}
+
+.codeExample {
+    background: #f1f1f1;
+    padding: 12px;
+
+    border-left: solid 1px #b477ff;
+    font-family: 'Source Code Pro', Monaco, 'Andale Mono';
+}
+
+textarea.codeExample {
+    width: 100%;
+    border: none;
+    border-left: solid 1px #b477ff;
+    font-size: 14px;
+}
+
+div.container {
+    width: 960px;
+    margin: 0 auto;
+}
