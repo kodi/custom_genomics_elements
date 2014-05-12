@@ -1,4 +1,4 @@
-<polymer-element name="x-gene" attributes="name">
+<polymer-element name="x-gene" attributes="name,element">
     <template>
 
         <style>
@@ -16,7 +16,7 @@
                 font-size: 12px;
                 padding: 6px 12px;
                 position: absolute;
-                min-width: 140px;
+                min-width: 160px;
                 z-index: 999;
                 display: none;
                 top: -10px;
@@ -51,6 +51,8 @@
                 <div class="title">GENE: {{name}}</div>
                 Resources: <br/>
                 <a href="http://www.ncbi.nlm.nih.gov/gene/?term={{name}}" target="_blank">Search on NCBI site</a>
+                <a href="http://www.ensembl.org/Multi/Search/Results?q={{name}};site=ensembl" target="_blank">Search on Esemble site</a>
+
             </div>
             <span>{{name}}</span>
 
@@ -59,6 +61,7 @@
     <script>
         Polymer('x-gene', {
             name: "Gene Name Not Provided",
+            element : 'span',
             over : function(){
                 this.$.tooltip.style.display = 'block';
             },
